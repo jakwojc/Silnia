@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main() {
+int i,a,p,c;
+float sum,summ;
+char d='t';
+while (d=='t') {
+c=0;
+p=0;
+printf("Z czego policzyc silnie?\n");
+scanf("%d",&a);
+sum=1;
+for (i=1;i<=a;i++) {
+sum=sum*i;
+if (sum>1000000000 || c==1) {
+c=1;
+while (sum>=10) {
+sum=sum/10;
+p++;
+}
+}
+}
+if (p!=0) {
+printf("Wynik:%.5f * 10^%d\n",sum,p);
+} else {
+printf("Wynik:%d\n",(int)sum);
+}
+printf("Czy chcesz kontynuowac?\n");
+scanf(" %c",&d);
+}
+return 0;
+}
